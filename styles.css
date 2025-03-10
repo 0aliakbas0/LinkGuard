@@ -1,0 +1,292 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom right, #ffffff, #87CEEB); /* Gündüz: Beyaz ve Mavi */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  min-height: 100vh;
+  transition: background 0.5s ease; /* Geçiş efekti için */
+}
+
+body.dark-mode {
+  background: linear-gradient(to bottom right, #1a2a44, #2c3e50, #34495e); /* Gece: Koyu mavi-mor tonları */
+  color: #ecf0f1; /* Metin rengi gece modunda açık */
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9); /* Gündüz: Hafif şeffaf beyaz */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  min-height: 90vh;
+  margin-top: 20px;
+  transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.container.dark-mode {
+  background: rgba(52, 73, 94, 0.9); /* Gece: Koyu gri-mavi tonu */
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.5); /* Gece için daha derin gölge */
+}
+
+h1 {
+  color: #1E90FF; /* Gündüz: Dodger Blue */
+  font-size: 2em;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+h1.dark-mode {
+  color: #00b4d8; /* Gece: Parlak mavi-yeşil tonu */
+}
+
+p {
+  color: #333;
+  font-size: 1.1em;
+  margin-top: 0;
+}
+
+p.dark-mode {
+  color: #d3e0ea; /* Gece: Açık gri-mavi */
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  border: 2px solid #1E90FF; /* Gündüz: Dodger Blue */
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 1em;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+input.dark-mode {
+  border-color: #00b4d8; /* Gece: Parlak mavi-yeşil */
+  background: #2c3e50;
+  color: #ecf0f1;
+}
+
+button {
+  padding: 10px 20px;
+  background: #1E90FF; /* Gündüz: Dodger Blue */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #104E8B; /* Gündüz: Koyu mavi hover */
+}
+
+button.dark-mode {
+  background: #00b4d8; /* Gece: Parlak mavi-yeşil */
+}
+
+button.dark-mode:hover {
+  background: #0077b6; /* Gece: Daha koyu mavi hover */
+}
+
+#darkModeToggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background: none;
+  color: #1E90FF; /* Gündüz: Dodger Blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+#darkModeToggle:hover {
+  color: #104E8B; /* Gündüz: Koyu mavi hover */
+}
+
+#darkModeToggle.dark-mode {
+  color: #00b4d8; /* Gece: Parlak mavi-yeşil */
+}
+
+#darkModeToggle.dark-mode:hover {
+  color: #0077b6; /* Gece: Daha koyu mavi hover */
+}
+
+#detectiveContainer {
+  position: relative;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+}
+
+#detective {
+  width: 150px;
+  height: 150px;
+}
+
+#speechBubble {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #1E90FF;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+#speechBubble.dark-mode {
+  background: rgba(44, 62, 80, 0.9);
+  border-color: #00b4d8;
+}
+
+#speechBubble::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #1E90FF;
+}
+
+#speechBubble.dark-mode::after {
+  border-right-color: #00b4d8;
+}
+
+#speechText {
+  margin: 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+#speechText.dark-mode {
+  color: #d3e0ea;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#detailsButton {
+  margin-top: 10px;
+  background: #4a90e2;
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+#detailsButton.dark-mode {
+  background: #00b4d8;
+}
+
+#detailsPanel, #whoisPanel {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+#detailsPanel.dark-mode, #whoisPanel.dark-mode {
+  background: rgba(44, 62, 80, 0.9);
+}
+
+#detailsPanel h3, #whoisPanel h3 {
+  margin: 0 0 10px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+#detailsPanel h3.dark-mode, #whoisPanel h3.dark-mode {
+  color: #d3e0ea;
+}
+
+#detailsList, #whoisList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#detailsList li, #whoisList li {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+#detailsList li.dark-mode, #whoisList li.dark-mode {
+  color: #d3e0ea;
+}
+
+#shareButtons {
+  margin-top: 10px;
+}
+
+.share-btn {
+  padding: 8px 15px;
+  margin: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.share-btn.twitter {
+  background: #1DA1F2;
+}
+
+.share-btn.whatsapp {
+  background: #25D366;
+}
+
+.share-btn.dark-mode {
+  opacity: 0.9;
+}
+
+.share-btn:hover {
+  opacity: 0.9;
+}
+
+#scoreBoard {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #666;
+}
+
+#scoreBoard.dark-mode {
+  color: #d3e0ea;
+}
+
+#tips {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+#tips.dark-mode {
+  background: rgba(44, 62, 80, 0.9);
+}
+
+.hidden {
+  display: none;
+}

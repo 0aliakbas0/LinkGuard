@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Dedektifi 🕵️‍♂️</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <button id="darkModeToggle"></button>
+    <h1>Link Dedektifi 🕵️‍♂️</h1>
+    <p>Merhaba! Ben Dedektif Linko. Şüpheli bir link mi buldun? Hadi inceleyelim!</p>
+    <div id="detectiveContainer">
+      <div id="detective"></div>
+      <div id="speechBubble" class="hidden">
+        <p id="speechText">Merhaba! Şüpheli bir link mi buldun? Hadi inceleyelim!</p>
+      </div>
+    </div>
+    <input type="text" id="linkInput" placeholder="Şüpheli linki buraya yapıştır">
+    <button onclick="analyzeLink()">Analiz Et</button>
+    <div id="result"></div>
+    <button id="detailsButton" class="hidden" onclick="toggleDetails()">Detayları Gör</button>
+    <div id="detailsPanel" class="hidden">
+      <h3>Analiz Detayları</h3>
+      <ul id="detailsList"></ul>
+    </div>
+    <div id="whoisPanel" class="hidden">
+      <h3>WHOIS Bilgileri</h3>
+      <ul id="whoisList"></ul>
+    </div>
+    <div id="shareButtons" class="hidden">
+      <button class="share-btn twitter" onclick="shareOnTwitter()">Twitter'da Paylaş</button>
+      <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">WhatsApp'ta Paylaş</button>
+    </div>
+    <div id="tips" class="hidden">
+      <h3>Link Dedektifinden İpucu</h3>
+      <p id="tipText"></p>
+    </div>
+    <div id="scoreBoard">
+      Skor: <span id="score">0</span> | Rozet: <span id="badge">Acemi Dedektif</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
