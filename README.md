@@ -13,6 +13,7 @@ Link Dedektifi, şüpheli linkleri analiz eden eğlenceli ve güçlü bir web uy
 3. **`.env` Dosyasını Oluşturun ve API Anahtarlarını Ekleyin:**
    - Proje kök dizininde bir metin editörüyle `.env` adında bir dosya oluşturun.
    - Aşağıdaki bilgileri ekleyin (kendi API anahtarlarınızı WhoIsXML ve VirusTotal’dan alın):
+
      VIRUSTOTAL_API_KEY=Your_VirusTotal_API_Key
 
      WHOISXML_API_KEY=Your_WhoisXML_API_Key
