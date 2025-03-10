@@ -5,7 +5,7 @@ Link Dedektifi, şüpheli linkleri analiz eden eğlenceli ve güçlü bir web uy
 ## Kurulum
 
 1. **Projeyi Klonlayın:**
-   git clone https://github.com/kullanici-adi/link-dedektifi.git
+
 
 2. **Bağımlılıkları Yükleyin:**
    npm install
