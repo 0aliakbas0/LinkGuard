@@ -15,6 +15,7 @@ Link Dedektifi, şüpheli linkleri analiz eden eğlenceli ve güçlü bir web uy
    - Aşağıdaki bilgileri ekleyin (kendi API anahtarlarınızı WhoIsXML ve VirusTotal’dan alın):
 
      VIRUSTOTAL_API_KEY=Your_VirusTotal_API_Key
+
      WHOISXML_API_KEY=Your_WhoisXML_API_Key
      
 
